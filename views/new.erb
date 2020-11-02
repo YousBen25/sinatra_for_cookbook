@@ -1,0 +1,24 @@
+    <section>
+      <h1>Create a recipe</h1>
+      <p>Please complete the form</p>
+      <form action="/recipes" method="POST">
+        <label for="title">Title:</label>
+        <br>
+        <!--Add the pattern attribute to the input below-->
+        <input name="title" type="text" required minlength="3" maxlength="15" pattern="[a-zA-Z0-9]+">
+        <br>
+        <label for="ingredients">Ingredients:</label>
+        <br>
+        <input  name="ingredients" type="text" >
+        <br>
+        <label for="rating">Rating */5:</label>
+        <br>
+        <input id="rating" name="rating" type="text">
+        <br>
+        <label for="prep_time">Preparation time:</label>
+        <br>
+        <input id="prep_time" name="prep_time" type="text">
+        <br>
+        <input type="submit" value="Submit">
+      </form>
+    </section>

@@ -1,0 +1,18 @@
+<div class="recipe-list">
+  <% @recipes.each_with_index do |recipe, index| %>
+  <li>
+    <%=index + 1%>-<%= recipe.done? ? "[x]" : "[ ]"%><%= recipe.title %>
+  </li>
+<% end %>
+</div>
+
+<br>
+<p>Select a recipe</p>
+      <form action="/mark_as_done" method="post">
+        <input type="hidden" value="patch" name="_method">
+        <label for="index">Index ?</label>
+        <br>
+        <input  name="index" type="text" >
+        <br>
+        <input type="submit" value="Submit">
+      </form>
